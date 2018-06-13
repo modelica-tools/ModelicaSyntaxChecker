@@ -1,0 +1,42 @@
+    |\^/|     MapleSim Stand-Alone Modelica Parser 3.4
+._|\|   |/|_. Copyright (c) 2018 by Maplesoft. May be freely used for library
+ \  Maple  /  syntax validation, and for non-commercial educational purposes.
+ <___Sim___>  Execute moparser -? to display command-line options.
+      |       Learn more about MapleSim at http://www.maplesim.com
+
+Usage: moparser [options] [file...]
+
+Modelica Language Options:
+-v #.#	accept Modelica Version #.# syntax (default 3.4)
+-a	allow Annotations everywhere even for -v 3.1 and higher
+-x	allow extends keyword for constrainedby even for -v 3.0 and higher
+-f	input is expected to be Flat Modelica
+-t	perform lexical analysis (Tokenization) only; do not parse
+
+Output Options:
+-e	redirect syntax Errors to standard output
+-s	produce abstract Syntax tree output in function call format
+-m	produce abstract syntax tree output in Maple .m format
+-q	Quietly return an exit code; do not produce any output at all
+-l	List file names to error stream as they are processed
+-c	print Count of files and directories to error stream
+
+Other Options:
+-r	Recurse into directories (file arguments must be directories)
+
+This program parses Modelica source code read from the standard input or from
+one or more files. By default, the input is expected to be strictly Modelica
+3.4 compliant. Command line options allow specifying older Modelica versions
+(2.2 or newer) or less strict compliance to a specified version. The -f command
+line option specifies that the input is in flat Modelica format.
+
+By default, output (to standard output) is only produced if there are syntax
+errors in the input. The program can also output an abstract syntax tree in
+Maple function call syntax (-s) or Maple ".m" format (-m). If the -q option is
+specified, no output is produced at all. In all cases, an exit code of 0
+indicates no errors, and a non-zero exit code indicates errors in one or more
+input files.
+
+Entire libraries can be processed using the -r option, which will recursively
+traverse the specified directory and process all the ".mo" files found (or
+".mof" files if -f was specified).
