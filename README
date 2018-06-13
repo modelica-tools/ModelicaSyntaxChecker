@@ -40,3 +40,6 @@ input files.
 Entire libraries can be processed using the -r option, which will recursively
 traverse the specified directory and process all the ".mo" files found (or
 ".mof" files if -f was specified).
+
+Preview link of Grammar.html: 
+https://htmlpreview.github.io/?https://github.com/modelica-tools/ModelicaSyntaxChecker/blob/master/Grammar.html
