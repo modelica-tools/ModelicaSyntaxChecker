@@ -1,5 +1,5 @@
-    |\^/|     MapleSim Stand-Alone Modelica Parser 3.4
-._|\|   |/|_. Copyright (c) 2018 by Maplesoft. May be freely used for library
+    |\^/|     MapleSim Stand-Alone Modelica Parser 3.6
+._|\|   |/|_. Copyright (c) 2023 by Maplesoft. May be freely used for library
  \  Maple  /  syntax validation, and for non-commercial educational purposes.
  <___Sim___>  Execute moparser -? to display command-line options.
       |       Learn more about MapleSim at http://www.maplesim.com
@@ -7,7 +7,7 @@
 Usage: moparser [options] [file...]
 
 Modelica Language Options:
--v #.#	accept Modelica Version #.# syntax (default 3.4)
+-v #.#	accept Modelica Version #.# syntax (default 3.6)
 -a	allow Annotations everywhere even for -v 3.1 and higher
 -x	allow extends keyword for constrainedby even for -v 3.0 and higher
 -f	input is expected to be Flat Modelica
@@ -26,7 +26,7 @@ Other Options:
 
 This program parses Modelica source code read from the standard input or from
 one or more files. By default, the input is expected to be strictly Modelica
-3.4 compliant. Command line options allow specifying older Modelica versions
+3.6 compliant. Command line options allow specifying older Modelica versions
 (2.2 or newer) or less strict compliance to a specified version. The -f command
 line option specifies that the input is in flat Modelica format.
 
@@ -41,5 +41,5 @@ Entire libraries can be processed using the -r option, which will recursively
 traverse the specified directory and process all the ".mo" files found (or
 ".mof" files if -f was specified).
 
-Preview link of Grammar.html: 
+Preview link of Grammar.html (out of date): 
 https://htmlpreview.github.io/?https://github.com/modelica-tools/ModelicaSyntaxChecker/blob/master/Grammar.html
